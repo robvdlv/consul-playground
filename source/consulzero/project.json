@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0-*",
+    "description": "zerodnx Console Application",
+    "authors": [ "" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+    "tooling": {
+        "defaultNamespace": "zerodnx"
+    },
+
+    "dependencies": {
+        "NetMQ": "3.3.2.2",
+        "Consul": "0.5.2.67"
+    },
+
+    "commands": {
+        "zerodnx": "zerodnx"
+    },
+
+    "frameworks": {
+        "dnx451": { }
+    }
+}

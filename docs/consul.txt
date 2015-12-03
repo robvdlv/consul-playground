@@ -1,0 +1,97 @@
+Consul Demo, Evan Echs
+https://www.youtube.com/watch?v=huvBEB3suoo
+
+What is Consul
+	Consul is service discovery
+	Service discovery, is a way to discover communication paths between services
+	
+	Multi datacenter
+	
+How does it work
+	binary runs in agentmode/server mode
+	works over network; gossip protocol
+		server is up/ but service is down
+		works best 3..5 agents in server mode
+			less, risk not quorom -> what does this mean
+	
+	
+Consul
+
+	is service discovery, config, and orch made easy
+	distributed, datacenter aware
+	
+	service discovery
+	what questions answered
+	- where is service foo
+	- two ways: http/dns; dns is legacy and easily understood
+	- integrate with it easily
+	
+	* service discovery supports service discovery internal and external services
+	
+	* failure detection
+
+		answers question: is service healthy?
+		discovery is failure detection, because you dont want to discover a server which is not running
+		
+		dns wont return healthy services
+		http will tell you details
+	
+	* key value storage
+
+	answers: what is the config of service x
+		tied closely to discovery aspect of it; kv is replicated and available
+		
+		can watch the configuration; pushed down to logic
+		
+		can set ACL across these things
+		the user service should never be able to get the non user passwords
+		
+		kv also multi datacenter
+	
+	* multi datacenter
+	
+		living in a world where multidatacenter bar is way down
+		
+		can view all of it in one ui
+	
+	* orchestration features
+	
+		able to control services that are already controlled
+		
+		events, execs, watches
+		
+		events:
+		send an event out to your cluster
+		scalable, highly probablistic (percentage calculatable)
+		
+		watches:
+		watch an event, execute a cmd, such as deploy
+		
+		orchestration tools:
+		three different models;
+		tradeoff for right tool for job
+		all approaches are used by users with a lot of agents; they work well
+		
+	* operation bullet points
+	
+		uses raft consensus protocol (read up)
+		gossip protocol for aliveness
+		three consistency models: default, consistent, stale
+		encryption, ACLs availble
+		real world usage to 1000s of agents per datacenter
+		
+	consul and docker
+	
+		two approaches
+		can run consul agent IN or OUT container
+		both well supported, theres tradeoffs
+		
+		big question is:
+		to docker or not to docker
+		tradeoffs is that:
+		
+			- consul in docker: health checks must be network based due to isolation
+			- consul on host (that is running docker): can run health checks that enter container, invoke docker for rich checks (file tests, pid tests etc): break in jail
+			- up to you, both ways work with above caveats
+		
+		

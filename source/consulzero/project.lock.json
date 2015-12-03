@@ -1,0 +1,107 @@
+{
+  "locked": false,
+  "version": -9996,
+  "targets": {
+    "DNX,Version=v4.5.1": {
+      "AsyncIO/0.1.17.0": {
+        "compile": {
+          "lib/net40/AsyncIO.dll": {}
+        },
+        "runtime": {
+          "lib/net40/AsyncIO.dll": {}
+        }
+      },
+      "Consul/0.5.2.67": {
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/net45/Consul.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Consul.dll": {}
+        }
+      },
+      "NetMQ/3.3.2.2": {
+        "dependencies": {
+          "AsyncIO": "0.1.17.0"
+        },
+        "compile": {
+          "lib/net40/NetMQ.dll": {}
+        },
+        "runtime": {
+          "lib/net40/NetMQ.dll": {}
+        }
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AsyncIO/0.1.17.0": {
+      "sha512": "3LYibF4+GDKgAOGCHAn02jnF3N06BnSf1MykzYOLbUPV99/RvakhjgDBgaPuvHJefqXvow/yQ1d+vLNRQYj/nA==",
+      "files": [
+        "AsyncIO.0.1.17.0.nupkg",
+        "AsyncIO.0.1.17.0.nupkg.sha512",
+        "AsyncIO.nuspec",
+        "lib/net35/AsyncIO.dll",
+        "lib/net40/AsyncIO.dll"
+      ]
+    },
+    "Consul/0.5.2.67": {
+      "sha512": "Zv/PVUmF18W4ku7f+fgnS2PFaRR+1+d1Z1L28rzYA6yboQ/xF5N17TsZHWtZykOasIP4/9awlV4ZhvF2FLy9Eg==",
+      "files": [
+        "Consul.0.5.2.67.nupkg",
+        "Consul.0.5.2.67.nupkg.sha512",
+        "Consul.nuspec",
+        "lib/net45/Consul.dll"
+      ]
+    },
+    "NetMQ/3.3.2.2": {
+      "sha512": "1CMvOgrzVXQd2YUNRhVuw22pncxe8IiuMDhhSBBz/O0QS8g20ixsMFsGEweik1rEKGHuSEmIKjhSqdT+97Rx2w==",
+      "files": [
+        "lib/net35/NetMQ.dll",
+        "lib/net35/NetMQ.XML",
+        "lib/net40/NetMQ.dll",
+        "lib/net40/NetMQ.XML",
+        "NetMQ.3.3.2.2.nupkg",
+        "NetMQ.3.3.2.2.nupkg.sha512",
+        "NetMQ.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/7.0.1": {
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "tools/install.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "NetMQ >= 3.3.2.2",
+      "Consul >= 0.5.2.67"
+    ],
+    "DNX,Version=v4.5.1": []
+  }
+}

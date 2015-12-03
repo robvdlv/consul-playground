@@ -1,0 +1,13 @@
+[‎03-‎12-‎2015 21:06] John Van Loon: 
+todo:
+vagrant up
+vagrant ssh
+consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -client=172.17.0.1 
+new console
+vagrant ssh
+cd /
+docker build -t zerodnx:consul zerodnx 
+[‎03-‎12-‎2015 21:07] Van der Linden Vooren, Rob (NL - Utrecht): 
+genoteerd
+[‎03-‎12-‎2015 21:07] John Van Loon: 
+ docker run zerodnx:consul blah 

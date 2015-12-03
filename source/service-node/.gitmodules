@@ -1,0 +1,4 @@
+[submodule "build/modules"]
+	path = build/modules
+	url = http://nldlc0068.dlc.local/scm/pxr/build-scripts.git
+	branch = master
